@@ -7,7 +7,7 @@ import { Box, Grid, Rating, Typography } from "@mui/material";
 //MUI icons
 import { AccessTime } from "@mui/icons-material";
 
-export const TourCard = () => {
+export const TourCard = ({ tour }) => {
     const [rating, setRating] = useState(3.5);
     const flex = { display: "flex", alignItems: "center", gap: "8px" };
     return (
@@ -19,7 +19,7 @@ export const TourCard = () => {
                 <Paper elevation={3}>
                     <div className="place">
                         <img
-                            src="https://images.unsplash.com/photo-1463695970743-ae65cca05743?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmlhZ3JhJTIwZmFsbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                            src={tour.image}
                             alt="place"
                         />
                     </div>
@@ -28,7 +28,7 @@ export const TourCard = () => {
                             variant="subtitle1"
                             component={"h2"}
                         >
-                            Immerse into the falls
+                            {tour.name}
                         </Typography>
                         <Box sx={flex}>
                             <AccessTime sx={{ width: "13px", height: "13px" }} />
@@ -36,7 +36,7 @@ export const TourCard = () => {
                                 variant="body2"
                                 component={"p"}
                             >
-                                5 hours
+                                {tour.duration} hours
                             </Typography>
                         </Box>
                         <Box
@@ -62,7 +62,7 @@ export const TourCard = () => {
                                 variant="body3"
                                 component={"p"}
                             >
-                                (500 reviews)
+                                ({tour.numberOfReviews} reviews)
                             </Typography>
                         </Box>
                         <Box>
@@ -71,7 +71,7 @@ export const TourCard = () => {
                                 component={"h3"}
                                 marginTop={1}
                             >
-                                From $200
+                                From ${tour.price}
                             </Typography>
                         </Box>
                     </Box>
