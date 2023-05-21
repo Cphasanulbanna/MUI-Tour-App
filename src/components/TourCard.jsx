@@ -17,6 +17,7 @@ export const TourCard = ({ tour }) => {
                 sm={12}
                 sm1={6}
                 sm2={4}
+                git
                 md={3}
             >
                 <Paper elevation={3}>
