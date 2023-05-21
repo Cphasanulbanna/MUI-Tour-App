@@ -1,25 +1,16 @@
 import React from "react";
 
 //components
-import { TourCard } from "./components/TourCard";
+import { Gallery } from "./components/Gallery";
 
 //MUI components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 
 const App = () => {
     return (
         <>
             <Container>
-                <Grid
-                    container
-                    spacing={5}
-                >
-                    <TourCard />
-                    <TourCard />
-                    <TourCard />
-                    <TourCard />
-                </Grid>
+                <Gallery />
             </Container>
         </>
     );
