@@ -1,5 +1,8 @@
 import React from "react";
 
+//css
+import "./style.css";
+
 //Route
 import { Route, Routes } from "react-router-dom";
 
@@ -13,6 +16,16 @@ import { createTheme, ThemeProvider } from "@mui/material";
 
 const App = () => {
     const theme = createTheme({
+        breakpoints: {
+            values: {
+                sm: 320,
+                sm1: 480,
+                sm2: 768,
+                md: 1080,
+                lg: 1200,
+                xl: 1536,
+            },
+        },
         components: {
             MuiTypography: {
                 variants: [

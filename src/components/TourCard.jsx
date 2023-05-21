@@ -14,7 +14,10 @@ export const TourCard = ({ tour }) => {
         <>
             <Grid
                 item
-                xs={3}
+                sm={12}
+                sm1={6}
+                sm2={4}
+                md={3}
             >
                 <Paper elevation={3}>
                     <div className="place">
