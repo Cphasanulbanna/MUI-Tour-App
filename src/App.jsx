@@ -1,11 +1,14 @@
 import React from "react";
 
+//Route
+import { Route, Routes } from "react-router-dom";
+
 //components
 import { Gallery } from "./components/Gallery";
 import Header from "./components/Header";
+import { PlaceSinglepage } from "./components/PlaceSinglepage";
 
 //MUI components
-import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material";
 
 const App = () => {
@@ -36,9 +39,16 @@ const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <Header />
-            <Container>
-                <Gallery />
-            </Container>
+            <Routes>
+                <Route
+                    path="/"
+                    element={<Gallery />}
+                />
+                <Route
+                    path="/:id"
+                    element={<PlaceSinglepage />}
+                />
+            </Routes>
         </ThemeProvider>
     );
 };

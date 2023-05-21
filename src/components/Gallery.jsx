@@ -5,13 +5,14 @@ import { TourCard } from "./TourCard";
 
 //MUI components
 import { Grid, Typography } from "@mui/material";
+import Container from "@mui/material/Container";
 
 //data
 import places from "../data/data.json";
 
 export const Gallery = () => {
     return (
-        <>
+        <Container>
             {places.map((place, index) => (
                 <>
                     <Typography
@@ -34,6 +35,6 @@ export const Gallery = () => {
                     </Grid>
                 </>
             ))}
-        </>
+        </Container>
     );
 };
