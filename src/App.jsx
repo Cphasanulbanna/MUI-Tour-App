@@ -2,6 +2,7 @@ import React from "react";
 
 //components
 import { Gallery } from "./components/Gallery";
+import Header from "./components/Header";
 
 //MUI components
 import Container from "@mui/material/Container";
@@ -34,6 +35,7 @@ const App = () => {
     });
     return (
         <ThemeProvider theme={theme}>
+            <Header />
             <Container>
                 <Gallery />
             </Container>
